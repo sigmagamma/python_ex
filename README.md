@@ -10,6 +10,8 @@ input should be provided without () signs.
 (path) - the path to the database used  
 (country) - a name of a country  
 (year) - a year  
+Example:  
+python sendmessage.py localhost d:\sqlite\db\chinook.db USA 2009  
 The program will exit on an insufficient number of parameters or a non-numeric year parameter.
 ### parsemessage.py
 Module that listens to a queue and when a message is received opens the database (sent in the message)  
@@ -25,6 +27,8 @@ The module recieves input as arguments in the following syntax:
 Python parsemessage.py (server)  
 input should be provided without () signs.  
 (server) - the rabbitmq server  
+Example:  
+python parsemessage.py localhost  
 The program will exit on an insufficient number of parameters.  
 
 Note that the module deletes any exisitng messages in the queue prior to running.  
